@@ -5,6 +5,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js'></script>
   <script src='d3-adjacency-matrix-layout.js' type='text/JavaScript'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js'></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 </head>
 <style>
   svg {
@@ -50,8 +51,11 @@
 
       console.log(matrixData);
 
-      const someColors = d3.scaleOrdinal()
-        .range(d3.schemeCategory20b);
+      const colors = ['#fdbe85','#fd8d3c','#d94701'];
+
+      const colorScale = d3.scaleQuantile()
+        .domain([0, d3.max(matrixData, (d) => d.value)])
+        .range(colors);
 
       d3.select('svg')
         .append('g')
@@ -68,11 +72,10 @@
         .style('stroke', 'black')
         .style('stroke-width', '1px')
         .style('stroke-opacity', .1)
-        .style('fill', 'green')
+        .style('fill', d => colorScale(d.value))
         .style('fill-opacity', d => d.weight * 0.8)
         .append('title')
           .text(function(d) {
-          console.log(d);
           return d.source.name + " -> " + d.target.name + ": " + d.value;
         });
 
