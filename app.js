@@ -34,14 +34,18 @@ var OPACITY = {
   LAYOUT_INTERATIONS = 32,
   REFRESH_INTERVAL = 7000;
 
+function zoom() {
+  svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+}
+
 var formatNumber = function (d) {
     var numberFormat = d3.format(",.0f"); // zero decimal places
-    return "£" + numberFormat(d);
+    return numberFormat(d);
   },
 
   formatFlow = function (d) {
     var flowFormat = d3.format(",.0f"); // zero decimal places with sign
-    return "£" + flowFormat(Math.abs(d)) + (d < 0 ? " CR" : " DR");
+    return flowFormat(Math.abs(d));
   },
 
 // Used when temporarily disabling user interractions to allow animations to complete
@@ -74,6 +78,7 @@ colorScale = d3.scale.ordinal().domain(TYPES).range(TYPE_COLORS),
     .attr("width", WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
     .attr("height", HEIGHT + MARGIN.TOP + MARGIN.BOTTOM)
     .append("g")
+    // .call(d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", zoom))
     .attr("transform", "translate(" + MARGIN.LEFT + "," + MARGIN.TOP + ")");
 
 svg.append("g").attr("id", "links");
@@ -259,9 +264,9 @@ function update () {
     if (!isTransitioning) {
       showTooltip().select(".value").text(function () {
         if (d.direction > 0) {
-          return d.source.name + " → " + d.target.name + "\n" + formatNumber(d.value);
+          return d.source.name + " --> " + d.target.name + "\n" + formatNumber(d.value);
         }
-        return d.target.name + " ← " + d.source.name + "\n" + formatNumber(d.value);
+        return d.target.name + " <-- " + d.source.name + "\n" + formatNumber(d.value);
       });
 
       d3.select(this)
@@ -522,7 +527,8 @@ d3.json("bi-page-flow.json", function(error, graph) {
     .initializeNodes(function (node) {
       node.state = node.parent ? "contained" : "collapsed";
     })
-    .layout(LAYOUT_INTERATIONS);
+    .layout(LAYOUT_INTERATIONS)
+    .size([WIDTH, HEIGHT]);
 
   disableUserInterractions(2 * TRANSITION_DURATION);
 
