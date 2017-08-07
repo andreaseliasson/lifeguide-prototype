@@ -29,8 +29,8 @@ var OPACITY = {
     LEFT: OUTER_MARGIN
   },
   TRANSITION_DURATION = 400,
-  HEIGHT = 5900 - MARGIN.TOP - MARGIN.BOTTOM,
-  WIDTH = 3000 - MARGIN.LEFT - MARGIN.RIGHT,
+  HEIGHT = 5600 - MARGIN.TOP - MARGIN.BOTTOM,
+  WIDTH = 3500 - MARGIN.LEFT - MARGIN.RIGHT,
   LAYOUT_INTERATIONS = 32,
   REFRESH_INTERVAL = 7000;
 
@@ -515,6 +515,7 @@ var exampleLinks = [
 
 
 d3.json("bi-page-flow.json", function(error, graph) {
+  console.log(graph.nodes.length/2);
   biHiSankey
     .nodes(graph.nodes)
     .links(graph.links)
