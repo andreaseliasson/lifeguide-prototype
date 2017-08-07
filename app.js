@@ -34,9 +34,6 @@ var OPACITY = {
   LAYOUT_INTERATIONS = 32,
   REFRESH_INTERVAL = 7000;
 
-function zoom() {
-  svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-}
 
 var formatNumber = function (d) {
     var numberFormat = d3.format(",.0f"); // zero decimal places
@@ -78,7 +75,6 @@ colorScale = d3.scale.ordinal().domain(TYPES).range(TYPE_COLORS),
     .attr("width", WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
     .attr("height", HEIGHT + MARGIN.TOP + MARGIN.BOTTOM)
     .append("g")
-    // .call(d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", zoom))
     .attr("transform", "translate(" + MARGIN.LEFT + "," + MARGIN.TOP + ")");
 
 svg.append("g").attr("id", "links");
@@ -394,7 +390,7 @@ function update () {
         .style("opacity", 1).select(".value")
         .text(function () {
           var additionalInstructions = g.children.length ? "\n(Double click to expand)" : "";
-          return g.name + "\nNet flow: " + formatFlow(g.netFlow) + additionalInstructions;
+          return g.name + "\nNet flow: " + formatFlow(g.netFlow);
         });
     }
   });

@@ -1,3 +1,7 @@
+button {
+  padding: 10px 20px;
+}
+
 .node rect {
   cursor: move;
   shape-rendering: crispEdges;
@@ -6,14 +10,14 @@
 .node text {
   pointer-events: none;
   text-shadow: 1px 1px 2px #fff;
-  font-size: 0.8em;
+  font-size: 2em;
   font-family: sans-serif;
 }
 
 #tooltip {
   position: absolute;
   pointer-events: none;
-  font-size: 0.7em;
+  font-size: 2em;
   font-family: sans-serif;
   padding: 3px;
   width: auto;
