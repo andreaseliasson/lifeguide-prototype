@@ -13,7 +13,7 @@
   }
 
 </style>
-<svg width="1860" height="1400"></svg>
+<svg width="5600" height="3400"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
@@ -31,12 +31,13 @@
   var color = d3.scaleOrdinal(d3.schemeCategory20);
 
   var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().distance(10).strength(0.5))
+    .force("link", d3.forceLink().distance(5).strength(0.25))
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
   d3.json("all-page-flow.json", function(error, graph) {
     if (error) throw error;
+    console.log(graph.nodes.length);
 
     var nodes = graph.nodes,
 //      nodeById = d3.map(nodes, function(d) { return d.id; }),
@@ -62,7 +63,7 @@
 
     var rscale = d3.scaleLinear()
       .domain([2, d3.max(nodes, function(d) { return d.visits;})])
-      .range([3,20]);
+      .range([5,25]);
 
     var node = svg.selectAll(".node")
       .data(nodes.filter(function(d) { return d.name; }))
@@ -71,9 +72,9 @@
       .attr("r", function(d) { return rscale(d.visits); })
       .attr("fill", function(d) {
         if (d.name == "homepage") {
-          return 'steelblue';
+          return '#ef8a62';
         } else {
-          return 'green';
+          return '#67a9cf';
         }
       })
       .call(d3.drag()
@@ -98,6 +99,7 @@
       link.attr("d", positionLink);
       node.attr("transform", positionNode);
     }
+
   });
 
   function positionLink(d) {
