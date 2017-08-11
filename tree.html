@@ -61,14 +61,7 @@
         .x(function(d) { return d.y; })
         .y(function(d) { return d.x; }))
       .style("stroke-width", function (d) {
-        console.log(d);
-        console.log(linkScale(d.source.data.value));
-        console.log('');
         return linkScale(d.target.data.value).toString() + "px";
-      })
-      .append("title")
-      .text(function (d) {
-        return d.target.data.id + d.target.data.value;
       });
 
     var node = g.selectAll(".node")
@@ -77,12 +70,19 @@
       .attr("class", function(d) { return "node" + (d.children ? " node--internal" : " node--leaf"); })
       .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
 
+    var rScale = d3.scaleLinear()
+      .domain([2, d3.max(data, function (d) {
+        return parseInt(d.value);
+      })])
+      .range([2.5, 7]);
+
     node.append("circle")
-      .attr("r", 3);
+      .attr("r", function (d) {
+        return rScale(parseInt(d.data.value));
+      });
 
     node.append("title")
       .text(function (d) {
-        console.log(d.data);
         var output = "";
         d.id.split(".").forEach(function (page) {
           output += page + "->" + " ";
