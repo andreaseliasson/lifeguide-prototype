@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Adjacency Matrix</title>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="d3.layout.adjacencyMatrix.js" type="text/JavaScript"></script>
+    <script src="adj-matrix.js"></script>
+  </head>
+  <style>
+    svg {
+      border: 0px solid gray;
+    }
+    g.am-axis text {
+      font-size: 8px;
+    }
+
+    .domain {
+      fill: none;
+    }
+
+    .tick > line{
+      stroke: black;
+      stroke-width: 1px;
+      stroke-opacity: .25;
+    }
+  </style>
+  <body>
+    <div id='viz'>
+      <svg height='960px' width='960px'></svg>
+    </div>
+    <div id="controls" />
+  </body>
+</html>

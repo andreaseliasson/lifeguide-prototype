@@ -515,7 +515,7 @@ var exampleLinks = [
 ];
 
 
-d3.json("bi-page-flow.json", function(error, graph) {
+d3.json("data/bi-page-flow.json", function(error, graph) {
   console.log(graph.nodes.length/2);
   biHiSankey
     .nodes(graph.nodes)
