@@ -28,9 +28,13 @@ var OPACITY = {
     BOTTOM: OUTER_MARGIN,
     LEFT: OUTER_MARGIN
   },
+  HEIGTH0 = 10000,
+  WIDTH0 = 5000,
+  HEIGHT15 = 5600,
+  WIDTH15 = 3500,
   TRANSITION_DURATION = 400,
-  HEIGHT = 5600 - MARGIN.TOP - MARGIN.BOTTOM,
-  WIDTH = 3500 - MARGIN.LEFT - MARGIN.RIGHT,
+  HEIGHT = HEIGHT15 - MARGIN.TOP - MARGIN.BOTTOM,
+  WIDTH = WIDTH15 - MARGIN.LEFT - MARGIN.RIGHT,
   LAYOUT_INTERATIONS = 32,
   REFRESH_INTERVAL = 7000;
 
@@ -515,8 +519,9 @@ var exampleLinks = [
 ];
 
 
-d3.json("data/bi-page-flow.json", function(error, graph) {
-  console.log(graph.nodes.length/2);
+d3.json("data/bi-page-flow_orig.json", function(error, graph) {
+  console.log(graph.nodes.length/2 + " nodes");
+  console.log(graph.links.length + " links");
   biHiSankey
     .nodes(graph.nodes)
     .links(graph.links)
