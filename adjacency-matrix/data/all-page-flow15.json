@@ -1,0 +1,474 @@
+{
+  "links": [
+    {
+      "source": 0,
+      "target": 10,
+      "value": 22
+    },
+    {
+      "source": 0,
+      "target": 45,
+      "value": 17
+    },
+    {
+      "source": 1,
+      "target": 38,
+      "value": 39
+    },
+    {
+      "source": 2,
+      "target": 46,
+      "value": 20
+    },
+    {
+      "source": 3,
+      "target": 8,
+      "value": 153
+    },
+    {
+      "source": 3,
+      "target": 19,
+      "value": 21
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "value": 18
+    },
+    {
+      "source": 5,
+      "target": 24,
+      "value": 19
+    },
+    {
+      "source": 6,
+      "target": 21,
+      "value": 23
+    },
+    {
+      "source": 7,
+      "target": 18,
+      "value": 18
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "value": 26
+    },
+    {
+      "source": 8,
+      "target": 47,
+      "value": 16
+    },
+    {
+      "source": 8,
+      "target": 42,
+      "value": 95
+    },
+    {
+      "source": 9,
+      "target": 8,
+      "value": 23
+    },
+    {
+      "source": 10,
+      "target": 11,
+      "value": 27
+    },
+    {
+      "source": 11,
+      "target": 48,
+      "value": 16
+    },
+    {
+      "source": 12,
+      "target": 13,
+      "value": 19
+    },
+    {
+      "source": 13,
+      "target": 0,
+      "value": 20
+    },
+    {
+      "source": 14,
+      "target": 6,
+      "value": 23
+    },
+    {
+      "source": 15,
+      "target": 17,
+      "value": 22
+    },
+    {
+      "source": 16,
+      "target": 39,
+      "value": 38
+    },
+    {
+      "source": 17,
+      "target": 21,
+      "value": 21
+    },
+    {
+      "source": 18,
+      "target": 49,
+      "value": 18
+    },
+    {
+      "source": 19,
+      "target": 20,
+      "value": 21
+    },
+    {
+      "source": 20,
+      "target": 40,
+      "value": 19
+    },
+    {
+      "source": 21,
+      "target": 47,
+      "value": 62
+    },
+    {
+      "source": 22,
+      "target": 29,
+      "value": 18
+    },
+    {
+      "source": 23,
+      "target": 50,
+      "value": 17
+    },
+    {
+      "source": 24,
+      "target": 34,
+      "value": 18
+    },
+    {
+      "source": 25,
+      "target": 26,
+      "value": 22
+    },
+    {
+      "source": 25,
+      "target": 27,
+      "value": 69
+    },
+    {
+      "source": 26,
+      "target": 27,
+      "value": 21
+    },
+    {
+      "source": 27,
+      "target": 1,
+      "value": 26
+    },
+    {
+      "source": 28,
+      "target": 25,
+      "value": 80
+    },
+    {
+      "source": 29,
+      "target": 2,
+      "value": 19
+    },
+    {
+      "source": 30,
+      "target": 51,
+      "value": 17
+    },
+    {
+      "source": 31,
+      "target": 28,
+      "value": 74
+    },
+    {
+      "source": 32,
+      "target": 31,
+      "value": 85
+    },
+    {
+      "source": 33,
+      "target": 35,
+      "value": 18
+    },
+    {
+      "source": 34,
+      "target": 7,
+      "value": 18
+    },
+    {
+      "source": 35,
+      "target": 30,
+      "value": 17
+    },
+    {
+      "source": 36,
+      "target": 33,
+      "value": 18
+    },
+    {
+      "source": 37,
+      "target": 43,
+      "value": 21
+    },
+    {
+      "source": 37,
+      "target": 44,
+      "value": 61
+    },
+    {
+      "source": 38,
+      "target": 16,
+      "value": 38
+    },
+    {
+      "source": 39,
+      "target": 15,
+      "value": 21
+    },
+    {
+      "source": 39,
+      "target": 21,
+      "value": 17
+    },
+    {
+      "source": 40,
+      "target": 12,
+      "value": 20
+    },
+    {
+      "source": 41,
+      "target": 44,
+      "value": 27
+    },
+    {
+      "source": 42,
+      "target": 37,
+      "value": 91
+    },
+    {
+      "source": 43,
+      "target": 32,
+      "value": 20
+    },
+    {
+      "source": 44,
+      "target": 32,
+      "value": 60
+    },
+    {
+      "source": 44,
+      "target": 41,
+      "value": 28
+    }
+  ],
+  "nodes": [
+    {
+      "name": "chooseeatplan",
+      "visits": 20
+    },
+    {
+      "name": "entersteps",
+      "visits": 26
+    },
+    {
+      "name": "goalsetting",
+      "visits": 19
+    },
+    {
+      "name": "homepage",
+      "visits": 174
+    },
+    {
+      "name": "ifthenplans"
+    },
+    {
+      "name": "ifthenplans2_",
+      "visits": 18
+    },
+    {
+      "name": "lastweekgoalspa",
+      "visits": 23
+    },
+    {
+      "name": "lessmotivated",
+      "visits": 18
+    },
+    {
+      "name": "login",
+      "visits": 176
+    },
+    {
+      "name": "loginfailed",
+      "visits": 26
+    },
+    {
+      "name": "lowcal",
+      "visits": 22
+    },
+    {
+      "name": "lowcalideas",
+      "visits": 27
+    },
+    {
+      "name": "nocaloriecounting",
+      "visits": 20
+    },
+    {
+      "name": "nostrictdiet",
+      "visits": 19
+    },
+    {
+      "name": "pamixchange"
+    },
+    {
+      "name": "pawalkbarriers",
+      "visits": 21
+    },
+    {
+      "name": "pawalkchange",
+      "visits": 38
+    },
+    {
+      "name": "pawalkplans",
+      "visits": 22
+    },
+    {
+      "name": "reasonstoloseweight",
+      "visits": 18
+    },
+    {
+      "name": "registration",
+      "visits": 21
+    },
+    {
+      "name": "registrationfinish",
+      "visits": 21
+    },
+    {
+      "name": "reviewfinish",
+      "visits": 61
+    },
+    {
+      "name": "s1end"
+    },
+    {
+      "name": "s1links"
+    },
+    {
+      "name": "s1mygoals",
+      "visits": 19
+    },
+    {
+      "name": "s2_s1goaldecision",
+      "visits": 80
+    },
+    {
+      "name": "s2_s2goalchange",
+      "visits": 22
+    },
+    {
+      "name": "s2_s2newplans",
+      "visits": 90
+    },
+    {
+      "name": "s2changeplan",
+      "visits": 74
+    },
+    {
+      "name": "s2intro",
+      "visits": 18
+    },
+    {
+      "name": "s2links",
+      "visits": 17
+    },
+    {
+      "name": "s2newgoal",
+      "visits": 85
+    },
+    {
+      "name": "s2reviewgoals",
+      "visits": 80
+    },
+    {
+      "name": "s2sendingmessages",
+      "visits": 18
+    },
+    {
+      "name": "s2stayontrack",
+      "visits": 18
+    },
+    {
+      "name": "s2supportother",
+      "visits": 18
+    },
+    {
+      "name": "s2supportwebsite"
+    },
+    {
+      "name": "s2weight",
+      "visits": 91
+    },
+    {
+      "name": "stepfeedback",
+      "visits": 39
+    },
+    {
+      "name": "stepgoalreview",
+      "visits": 38
+    },
+    {
+      "name": "usingpower",
+      "visits": 19
+    },
+    {
+      "name": "weightgraph",
+      "visits": 28
+    },
+    {
+      "name": "welcomeback",
+      "visits": 95
+    },
+    {
+      "name": "wpgain",
+      "visits": 21
+    },
+    {
+      "name": "wplost",
+      "visits": 88
+    },
+    {
+      "name": "lowcarb",
+      "visits": 17
+    },
+    {
+      "name": "fooddiary",
+      "visits": 20
+    },
+    {
+      "name": "s2sessionchoice",
+      "visits": 78
+    },
+    {
+      "name": "lowcaloriefood",
+      "visits": 16
+    },
+    {
+      "name": "myweightloss",
+      "visits": 18
+    },
+    {
+      "name": "s1finalpage",
+      "visits": 17
+    },
+    {
+      "name": "s2final",
+      "visits": 17
+    }
+  ]
+}
