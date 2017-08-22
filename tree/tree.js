@@ -9,8 +9,9 @@ var tree = d3.tree()
 var stratify = d3.stratify()
   .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
-d3.csv("data/tree.csv", function(error, data) {
+d3.csv("data/tree0.csv", function(error, data) {
   if (error) throw error;
+  console.log(data.length + " paths");
 
   var root = stratify(data)
     .sort(function(a, b) { return (a.height - b.height) || a.id.localeCompare(b.id); });

@@ -20,9 +20,10 @@ var simulation = d3.forceSimulation()
 //    .linkDistance(30)
 //    .size([width, height]);
 
-d3.json("data/all-page-flow.json", function(error, graph) {
+d3.json("data/all-page-flow1.json", function(error, graph) {
   if (error) throw error;
   console.log(graph.nodes.length);
+  console.log(graph.links.length);
 
   var nodes = graph.nodes,
 //      nodeById = d3.map(nodes, function(d) { return d.id; }),

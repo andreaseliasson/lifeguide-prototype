@@ -1,4 +1,4 @@
-d3.json("data/all-page-flow.json", createAdjacencyMatrix);
+d3.json("data/all-page-flow15.json", createAdjacencyMatrix);
 
 function createAdjacencyMatrix(data) {
 
@@ -12,6 +12,8 @@ function createAdjacencyMatrix(data) {
   var matrixData = adjacencyMatrix();
 
   console.log(matrixData);
+  console.log(data.nodes.length + " nodes");
+  console.log(data.links.length + " links");
 
   var someColors = d3.scale.category20b();
 

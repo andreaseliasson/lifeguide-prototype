@@ -28,7 +28,7 @@ var OPACITY = {
     BOTTOM: OUTER_MARGIN,
     LEFT: OUTER_MARGIN
   },
-  HEIGTH0 = 10000,
+  HEIGHT0 = 10000,
   WIDTH0 = 5000,
   HEIGHT15 = 5600,
   WIDTH15 = 3500,
@@ -519,7 +519,7 @@ var exampleLinks = [
 ];
 
 
-d3.json("data/bi-page-flow_orig.json", function(error, graph) {
+d3.json("data/bi-page-flow15.json", function(error, graph) {
   console.log(graph.nodes.length/2 + " nodes");
   console.log(graph.links.length + " links");
   biHiSankey
